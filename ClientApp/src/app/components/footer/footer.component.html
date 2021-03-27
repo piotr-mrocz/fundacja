@@ -1,0 +1,100 @@
+<footer class="footer bg-success text-white">
+  <div class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <!-- Adoption -->
+    <div class="col d-flex justify-content-center bg-info">
+        <ul>
+          <p>Zwierzęta</p>
+          <li>
+            <a href="/" >Strona główna</a>
+          </li>
+          <li>
+            <a routerLink="/dogs-to-adopt-list" >Psy do adopcji</a>
+          </li>
+          <li>
+            <a href="" >Koty do adopcji</a>
+          </li>
+          <li>
+            <a href="" >Oststnio znalezione</a>
+          </li>
+          <li>
+            <a routerLink="/how-to-adopt" >Jak adoptować?</a>
+          </li>
+          <li>
+            <a routerLink="/price-list">Cennik</a>
+          </li>
+          <li>
+            <a href="" >Znalazły już dom</a>
+          </li>
+        </ul>
+    </div>
+    <!-- Help -->
+    <div class="col d-flex justify-content-center bg-secondary">
+      <ul>
+        <p>Pomoc</p>
+        <li>
+          <a routerLink="/help" [fragment]="'procent'" >Przekaż nam 1%</a>
+        </li>
+        <li>
+          <a routerLink="/help" [fragment]="'gift'" >Dary rzeczowe</a>
+        </li>
+        <li>
+          <a routerLink="/help" [fragment]="'walk'">Pomoc w spacerach</a>
+        </li>
+        <li>
+          <a routerLink="/help" [fragment]="'voluntary'" >Działalność wolontariatu</a>
+        </li>
+      </ul>
+    </div>
+    <!-- About fundation -->
+    <div class="col d-flex justify-content-center bg-danger">
+      <ul>
+        <p>Nasza fundacja</p>
+        <li>
+          <a routerLink="/fundation" >Kilka słów o fundacji</a>
+        </li>
+        <li>
+          <a routerLink="/our-shelters">Nasze schroniska</a>
+        </li>
+        <li>
+          <a routerLink="/contact">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Contact -->
+    <div class="col d-flex justify-content-center bg-warning">
+       <ul id="contact">
+        <p>Kontakt</p>
+         <li>
+          <span><i class="bi bi-telephone-fill"></i> +48 xxx xxx xxx</span>
+         </li>
+         <li>
+          <a href="mailto: xxxx@wp.pl" id="email"><i class="bi bi-envelope-fill"></i>  xxxx@wp.pl</a>
+         </li>
+         <li>
+          <span> <i class="bi bi-signpost-fill"></i> ul. Marii Konopnickiej 62</span>
+         </li>
+         <li>
+          <span> <i class="bi bi-signpost-fill"></i> 64-980 Trzciank</span>
+         </li>
+       </ul>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center bg-dark">
+    <span> {{ footerText }} </span>
+</div>
+<div class="row d-flex justify-content-center bg-dark">
+  <ul id="horizontal">
+    <li>
+     <a target="_blank" routerLink="/privacy-policy"> Polityka prywatności </a>
+    </li>
+    <li>
+      <a target="_blank" routerLink="/processing-of-personal-data">Przetwarzanie danych osobowych</a>
+    </li>
+    <li>
+      <a target="_blank" routerLink="/access-declaration"> Deklaracja dostępności </a>
+    </li>
+  </ul>
+</div>
+</div>
+</footer>

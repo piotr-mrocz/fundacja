@@ -1,0 +1,19 @@
+#imgLogo:hover {
+    cursor: pointer;
+    border: none;
+}
+  
+
+#imgLogo:focus {
+    outline: none;
+}
+
+ul > li > a {
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+ul > li > a:hover {
+    color: #343a40;
+}
