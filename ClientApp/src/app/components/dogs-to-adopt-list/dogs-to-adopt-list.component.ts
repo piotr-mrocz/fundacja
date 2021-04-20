@@ -1,4 +1,9 @@
+import { DatePipe } from '@angular/common';
+import { PetServiceService } from './../../services/pet-service.service';
 import { Component, OnInit } from '@angular/core';
+import { Pet } from 'src/app/models/pet';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dogs-to-adopt-list',
@@ -7,9 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DogsToAdoptListComponent implements OnInit {
 
-  constructor() { }
+  pets: Observable<Pet[]>;
+  constructor(private http: PetServiceService) { }
 
-  ngOnInit() {
+  ngOnInit() { 
+    this.pets = this.http.getPets();
+    this.http.getPets();
   }
 
 }
+  

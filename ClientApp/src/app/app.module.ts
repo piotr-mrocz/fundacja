@@ -1,3 +1,4 @@
+import { PetDetailsComponent } from './components/pet-details/pet-details.component';
 import { DogsToAdoptListComponent } from './components/dogs-to-adopt-list/dogs-to-adopt-list.component';
 import { HowToAdoptComponent } from './components/how-to-adopt/how-to-adopt.component';
 import { OurSheltersComponent } from './components/our-shelters/our-shelters.component';
@@ -16,8 +17,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.modules';
 import { PriceListComponent } from './components/price-list/price-list.component';
@@ -40,6 +39,7 @@ import { PriceListComponent } from './components/price-list/price-list.component
     PriceListComponent,
     HowToAdoptComponent,
     DogsToAdoptListComponent,
+    PetDetailsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

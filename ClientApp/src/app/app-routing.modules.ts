@@ -1,3 +1,4 @@
+import { PetDetailsComponent } from './components/pet-details/pet-details.component';
 import { DogsToAdoptListComponent } from './components/dogs-to-adopt-list/dogs-to-adopt-list.component';
 import { HowToAdoptComponent } from './components/how-to-adopt/how-to-adopt.component';
 import { HelpComponent } from './components/help/help.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
     {path: 'price-list', component: PriceListComponent},
     {path: 'how-to-adopt', component: HowToAdoptComponent},
     {path: 'dogs-to-adopt-list', component: DogsToAdoptListComponent},
+    {path: 'pet-details/:id', component: PetDetailsComponent},
     {path: '**', component: PageNotFoundComponent}
 ];
 

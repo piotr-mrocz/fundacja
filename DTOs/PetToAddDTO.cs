@@ -14,7 +14,7 @@ namespace FundacjaZawszeRazem.DTOs
         [Required(ErrorMessage = "Data urodzenia lub przypuszczalna data urodzenia jest wymagana")]
         public DateTime DateOfBirth { get; set; }
 
-        public int Age { get; set; }
+        public string Age { get; set; }
 
         [Required(ErrorMessage = "Data przybycia do schroniska jest wymagana")]
         public DateTime InShelter { get; set; }

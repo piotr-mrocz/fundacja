@@ -10,11 +10,11 @@ namespace FundacjaZawszeRazem.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public int Age
+        public string Age
         {
             get
             {
-                int age = Helpers.Helper.CalculateAge(DateOfBirth);
+                string age = Helpers.Helper.CalculateAge(DateOfBirth);
                 return age;
             }
         }
