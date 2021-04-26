@@ -1,0 +1,18 @@
+<div class="container-fluid">
+
+  
+  <app-divider></app-divider>
+
+  <div class="col-7 align-self-center mb-5" style="margin: auto;">
+    <h2>Koty czekające na adopcje</h2>
+    <hr>
+    <div class="row">
+      <div class="card m-2 hover-overlay" style="width: 15rem;" *ngFor="let pet of pets | async" [routerLink]="['/pet-details', pet.id]">
+        <img [src]="pet.photo" class="card-img-top" alt="cat" style="height: 160px;">
+        <div class="card-body bg-warning">
+          <p class="card-text text-center h5" id="petName">{{pet.name}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

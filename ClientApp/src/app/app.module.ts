@@ -1,3 +1,4 @@
+import { CatsToAdoptComponent } from './components/cats-to-adopt/cats-to-adopt.component';
 import { PetDetailsComponent } from './components/pet-details/pet-details.component';
 import { DogsToAdoptListComponent } from './components/dogs-to-adopt-list/dogs-to-adopt-list.component';
 import { HowToAdoptComponent } from './components/how-to-adopt/how-to-adopt.component';
@@ -40,6 +41,7 @@ import { PriceListComponent } from './components/price-list/price-list.component
     HowToAdoptComponent,
     DogsToAdoptListComponent,
     PetDetailsComponent,
+    CatsToAdoptComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

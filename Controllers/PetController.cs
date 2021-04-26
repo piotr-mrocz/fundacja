@@ -25,9 +25,10 @@ namespace FundacjaZawszeRazem.Controllers
 
         // See all pets
         [HttpGet]
-        public async Task<IActionResult> GetPets()
+        public async Task<IActionResult> GetPets([FromQuery]string species)
         {
-            var pets = await context.Pets.ToListAsync();
+            //var pets = await context.Pets.ToListAsync();
+            var pets = await context.Pets.Where(s => s.Species == species).ToListAsync();
             var petsToReturn = mapper.Map<List<PetsListDTO>>(pets);
             return Ok(petsToReturn);
         }

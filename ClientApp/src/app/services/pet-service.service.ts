@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pet } from '../models/pet';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { tap, map, filter } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +13,13 @@ export class PetServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getPets(): Observable<Pet[]>{
-    return this.http.get<Pet[]>(this.url);
+
+  getPets(species: string): Observable<Pet[]>{
+    return this.http.get<Pet[]>(this.url +'?Species=' + species);
   }
 
   getPet(id: string): Observable<Pet> {
     return this.http.get<Pet>(this.url + '/' + id);
   }
 }
+ 
