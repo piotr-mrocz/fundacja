@@ -1,3 +1,4 @@
+import { AdoptedPetsComponent } from './components/adopted-pets/adopted-pets.component';
 import { CatsToAdoptComponent } from './components/cats-to-adopt/cats-to-adopt.component';
 import { PetDetailsComponent } from './components/pet-details/pet-details.component';
 import { DogsToAdoptListComponent } from './components/dogs-to-adopt-list/dogs-to-adopt-list.component';
@@ -21,6 +22,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.modules';
 import { PriceListComponent } from './components/price-list/price-list.component';
+import { FoundHomeDetailsComponent } from './components/foundHome-details/foundHome-details.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { PriceListComponent } from './components/price-list/price-list.component
     DogsToAdoptListComponent,
     PetDetailsComponent,
     CatsToAdoptComponent,
+    AdoptedPetsComponent,
+    FoundHomeDetailsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

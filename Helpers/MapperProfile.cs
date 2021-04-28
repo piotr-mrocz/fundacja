@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using FundacjaZawszeRazem.DTOs;
-using FundacjaZawszeRazem.Models;
+using FundacjaZawszeRazem;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,3 +1,4 @@
+import { AdoptedPetsComponent } from './components/adopted-pets/adopted-pets.component';
 import { CatsToAdoptComponent } from './components/cats-to-adopt/cats-to-adopt.component';
 import { PetDetailsComponent } from './components/pet-details/pet-details.component';
 import { DogsToAdoptListComponent } from './components/dogs-to-adopt-list/dogs-to-adopt-list.component';
@@ -15,6 +16,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from '@angular/router';
 import { PriceListComponent } from './components/price-list/price-list.component';
+import { FoundHomeDetailsComponent } from './components/foundHome-details/foundHome-details.component';
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomePageComponent},
@@ -29,6 +31,8 @@ const routes: Routes = [
     {path: 'how-to-adopt', component: HowToAdoptComponent},
     {path: 'dogs-to-adopt-list', component: DogsToAdoptListComponent},
     {path: 'cats-to-adopt-list', component: CatsToAdoptComponent},
+    {path: 'adopted',  component: AdoptedPetsComponent},
+    {path: 'adopted/:id', component: FoundHomeDetailsComponent},
     {path: 'pet-details/:id', component: PetDetailsComponent},
     {path: '**', component: PageNotFoundComponent}
 ];

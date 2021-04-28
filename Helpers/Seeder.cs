@@ -21,12 +21,13 @@ namespace FundacjaZawszeRazem.Helpers
             {
                 if (!dataContext.Pets.Any())
                 {
-                    InsertSampleData();
+                    InsertSampleData_PetsToAdopt();
+                    InsertSampleData_AdoptedPets();
                 }
             }
         }
 
-        private void InsertSampleData()
+        private void InsertSampleData_PetsToAdopt()
         {
             var pets = new List<Pet>
             { 
@@ -291,6 +292,110 @@ namespace FundacjaZawszeRazem.Helpers
             dataContext.AddRange(pets);
             dataContext.SaveChanges();
 
+        }
+
+
+        private void InsertSampleData_AdoptedPets()
+        {
+            var adoptedPets = new List<FoundHome>
+            {
+                #region Dogs
+
+                new FoundHome
+                {
+                    Name = "Alan",
+                    DateOfBirth = new DateTime(2018, 08, 01),
+                    Adopted = new DateTime(2021, 02, 16),
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Pies",
+                    Gender = "Samiec",
+                    Photo = "../../../assets/Images/Dogs/pies17.jpg"
+                },
+
+                new FoundHome
+                {
+                    Name = "Ramirez",
+                    DateOfBirth = new DateTime(2019, 02, 01),
+                    Adopted = new DateTime(2021, 03, 12),
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Pies",
+                    Gender = "Samiec",
+                    Photo = "../../../assets/Images/Dogs/pies18.jpg"
+                },
+
+                new FoundHome
+                {
+                    Name = "Bella",
+                    DateOfBirth = new DateTime(2018, 01, 26),
+                    Adopted = new DateTime(2020, 12, 20),
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Pies",
+                    Gender = "Samica",
+                    Photo = "../../../assets/Images/Dogs/pies20.jpeg"
+                },
+
+                new FoundHome
+                {
+                    Name = "Punia",
+                    DateOfBirth = new DateTime(2019, 09, 01),
+                    Adopted = new DateTime(2021, 04, 18),
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Pies",
+                    Gender = "Samica",
+                    Photo = "../../../assets/Images/Dogs/pies21.jpg"
+                },
+                #endregion
+
+                #region Cats
+
+                new FoundHome
+                {
+                    Name = "Rikardo",
+                    DateOfBirth = new DateTime(2017, 12, 01),
+                    Adopted = new DateTime(2021, 04, 28),
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Kot",
+                    Gender = "Samiec",
+                    Photo = "../../../assets/Images/Cats/kot17.jpg"
+                },
+
+                new FoundHome
+                {
+                    Name = "Szwanki",
+                    DateOfBirth = new DateTime(2020, 12, 01),
+                    Adopted = new DateTime(2021, 04, 28),
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Kot",
+                    Gender = "Samiec",
+                    Photo = "../../../assets/Images/Cats/kot20.jpg"
+                },
+
+                new FoundHome
+                {
+                    Name = "Ptysia",
+                    DateOfBirth = new DateTime(2016, 11, 01),
+                    Adopted = new DateTime(2020, 12, 13),
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Kot",
+                    Gender = "Samica",
+                    Photo = "../../../assets/Images/Cats/kot18.jpg"
+                },
+
+                new FoundHome
+                {
+                    Name = "Fantazja",
+                    DateOfBirth = new DateTime(2018, 12, 01),
+                    Adopted = new DateTime(2021, 03, 30),
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Kot",
+                    Gender = "Samica",
+                    Photo = "../../../assets/Images/Cats/kot22.jpeg"
+                }
+                #endregion
+            };
+
+            dataContext.AddRange(adoptedPets);
+            dataContext.SaveChanges();
         }
     }
 }

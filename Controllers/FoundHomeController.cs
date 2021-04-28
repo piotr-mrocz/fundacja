@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using FundacjaZawszeRazem.Data;
 using FundacjaZawszeRazem.DTOs;
-using FundacjaZawszeRazem.Models;
+using FundacjaZawszeRazem;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;

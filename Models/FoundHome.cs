@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FundacjaZawszeRazem.Models
+namespace FundacjaZawszeRazem
 {
     public class FoundHome
     {
@@ -18,9 +18,10 @@ namespace FundacjaZawszeRazem.Models
                 return age;
             }
         }
+        public string Description {get; set;}
         public DateTime Adopted { get; set; }
         public string Species { get; set; }
-        public string Gender { get; set; }
+         public string Gender { get; set; }
         public string Photo { get; set; }
     }
 }

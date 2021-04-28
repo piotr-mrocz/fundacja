@@ -1,4 +1,4 @@
-﻿using FundacjaZawszeRazem.Models;
+﻿using FundacjaZawszeRazem;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
