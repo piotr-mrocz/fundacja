@@ -13,5 +13,7 @@ namespace FundacjaZawszeRazem.Data
 
         public DbSet<Pet> Pets { get; set; }
         public DbSet<FoundHome> Homes { get; set; }
+
+        public DbSet<RecentlyFound> Found { get; set; }
     }
 }

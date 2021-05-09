@@ -1,3 +1,6 @@
+import { RecentlyFoundDetailsComponent } from './components/recently-found-details/recently-found-details.component';
+import { RecentlyFoundComponent } from './components/recently-found/recently-found.component';
+import { PetServiceService } from './services/pet-service.service';
 import { AdoptedPetsComponent } from './components/adopted-pets/adopted-pets.component';
 import { CatsToAdoptComponent } from './components/cats-to-adopt/cats-to-adopt.component';
 import { PetDetailsComponent } from './components/pet-details/pet-details.component';
@@ -23,6 +26,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.modules';
 import { PriceListComponent } from './components/price-list/price-list.component';
 import { FoundHomeDetailsComponent } from './components/foundHome-details/foundHome-details.component';
+import { RecentlyFoundService } from './services/recentlyFound.service';
+import { FoundHomeService } from './services/foundHome.service';
+import { RecentlyFound } from './models/recentlyFound';
 
 @NgModule({
   declarations: [
@@ -46,6 +52,8 @@ import { FoundHomeDetailsComponent } from './components/foundHome-details/foundH
     CatsToAdoptComponent,
     AdoptedPetsComponent,
     FoundHomeDetailsComponent,
+    RecentlyFoundComponent,
+    RecentlyFoundDetailsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -53,7 +61,7 @@ import { FoundHomeDetailsComponent } from './components/foundHome-details/foundH
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [RecentlyFoundService, FoundHomeService, PetServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

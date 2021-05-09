@@ -23,6 +23,12 @@ namespace FundacjaZawszeRazem.Helpers
 
             CreateMap<FoundHomeToAddDTO, FoundHome>().ReverseMap();
             CreateMap<FoundHomeToUpdateDTO, FoundHome>().ReverseMap();
+
+            CreateMap<RecentlyFoundListDTO, RecentlyFound>().ReverseMap();
+            CreateMap<RecentlyFoundDetailsDTO, RecentlyFound>().ReverseMap();
+
+            CreateMap<RecentlyFoundToAddDTO, RecentlyFound>().ReverseMap();
+            CreateMap<RecentlyFoundToUpdateDTO, RecentlyFound>().ReverseMap();
         }
 
 

@@ -23,6 +23,7 @@ namespace FundacjaZawszeRazem.Helpers
                 {
                     InsertSampleData_PetsToAdopt();
                     InsertSampleData_AdoptedPets();
+                    InsertSampleDate_RecentlyFoundPets();
                 }
             }
         }
@@ -395,6 +396,104 @@ namespace FundacjaZawszeRazem.Helpers
             };
 
             dataContext.AddRange(adoptedPets);
+            dataContext.SaveChanges();
+        }
+    
+        private void InsertSampleDate_RecentlyFoundPets()
+        {
+            var recentlyFoundPets = new List<RecentlyFound>
+            {
+                #region Dogs
+                new RecentlyFound
+                {
+                    Chip = true,
+                    ChipSequence = "123456789",
+                    DateFound = new DateTime(2021, 04, 23),
+                    PlaceFound = "Jakaś ulica 2/1",
+                    City = "Jakieś miasto",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Pies",
+                    Gender = "Samica",
+                    Photo = "../../../assets/Images/Dogs/pies19.jpg"
+                },
+                new RecentlyFound
+                {
+                    Chip = true,
+                    ChipSequence = "123456789",
+                    DateFound = new DateTime(2021, 04, 23),
+                    PlaceFound = "Jakaś ulica 2/1",
+                    City = "Jakieś miasto",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Pies",
+                    Gender = "Samiec",
+                    Photo = "../../../assets/Images/Dogs/pies22.jpg"
+                },
+                new RecentlyFound
+                {
+                    Chip = true,
+                    ChipSequence = "123456789",
+                    DateFound = new DateTime(2021, 04, 23),
+                    PlaceFound = "Jakaś ulica 2/1",
+                    City = "Jakieś miasto",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Pies",
+                    Gender = "Samica",
+                    Photo = "../../../assets/Images/Dogs/pies23.jpg"
+                },
+                #endregion
+
+                #region Cats
+                new RecentlyFound
+                {
+                    Chip = true,
+                    ChipSequence = "123456789",
+                    DateFound = new DateTime(2021, 04, 23),
+                    PlaceFound = "Jakaś ulica 2/1",
+                    City = "Jakieś miasto",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Kot",
+                    Gender = "Samica",
+                    Photo = "../../../assets/Images/Cats/kot16.jpg"
+                },
+                new RecentlyFound
+                {
+                    Chip = true,
+                    ChipSequence = "123456789",
+                    DateFound = new DateTime(2021, 04, 23),
+                    PlaceFound = "Jakaś ulica 2/1",
+                    City = "Jakieś miasto",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Kot",
+                    Gender = "Samica",
+                    Photo = "../../../assets/Images/Cats/kot19.jpg"
+                },
+                new RecentlyFound
+                {
+                    Chip = true,
+                    ChipSequence = "123456789",
+                    DateFound = new DateTime(2021, 04, 23),
+                    PlaceFound = "Jakaś ulica 2/1",
+                    City = "Jakieś miasto",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Kot",
+                    Gender = "Samiec",
+                    Photo = "../../../assets/Images/Cats/kot20.jpg"
+                },
+                new RecentlyFound
+                {
+                    Chip = true,
+                    ChipSequence = "123456789",
+                    DateFound = new DateTime(2021, 04, 23),
+                    PlaceFound = "Jakaś ulica 2/1",
+                    City = "Jakieś miasto",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus tellus hendrerit interdum cursus. Pellentesque scelerisque enim vel finibus condimentum. Nullam fermentum ultrices nibh, eu sodales lorem iaculis nec. Ut nec felis nec velit egestas tristique at a augue. Praesent risus erat, fringilla sit amet bibendum eget, bibendum condimentum augue. Nulla facilisi. Quisque quis turpis mi. Vivamus commodo odio vel consectetur gravida. Morbi consectetur suscipit rhoncus. Aliquam at porta nisi, in accumsan urna. Maecenas efficitur, nisl vel bibendum porta, nibh massa efficitur diam, non condimentum risus ante nec urna. Etiam eget vestibulum lorem. Cras at feugiat turpis, a semper mi. Duis sodales mollis tortor nec cursus.Mauris molestie augue nulla, nec tincidunt libero venenatis ac. Duis dapibus placerat diam vitae faucibus. Proin accumsan, lectus et ultrices rhoncus, tortor ipsum vulputate quam, blandit vehicula elit metus at arcu. Proin tincidunt ut magna non lobortis. Aliquam magna leo, iaculis laoreet ante dignissim, vestibulum auctor sem. Morbi lacinia quis ex eu dignissim. Suspendisse libero justo, placerat ut augue sed, semper semper metus. ",
+                    Species = "Kot",
+                    Gender = "Samiec",
+                    Photo = "../../../assets/Images/Cats/kot23.jpg"
+                }
+                #endregion
+            };
+            dataContext.AddRange(recentlyFoundPets);
             dataContext.SaveChanges();
         }
     }

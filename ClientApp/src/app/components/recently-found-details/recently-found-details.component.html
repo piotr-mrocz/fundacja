@@ -1,0 +1,55 @@
+
+<div class="container-fluid" *ngIf="pet | async as pet">
+
+  
+  <app-divider></app-divider>
+
+  <div class="col-7 align-self-center mb-5" style="margin: auto;">
+    <h2>{{pet}}</h2>
+    <hr>
+    <div class="card mb-3">
+      <div class="row">
+        <div class="col-5  p-0 m-0" style="background-color: wheat;">
+          <img class="img-responsive" [src]="pet.photo" [alt]="pet.id" style="width: 100%;"> 
+          <h4 class="mt-5 text-center">Informacje:</h4>
+          <ul>
+            <li *ngIf="pet.chip === true">
+              <b>Posiada chip: tak</b>
+              <b>Chip: {{pet.chipSequence}}</b>
+            </li>
+            <li *ngIf="pet.chip === false">
+              <b>Posiada chip: nie</b>
+            </li>
+            <li>
+              <b>Odnaleziono: {{pet.dateFound | date: 'dd.MM.yyyy'}}</b>
+            </li>
+            <li>
+              <b>Adopcja: {{pet}}</b>
+            </li>
+            <li>
+              <b>Gdzie: {{pet.placeFound}}</b>
+              <b>Gdzie: {{pet.city}}</b>
+            </li>
+            <li>
+              <b>Płeć: {{pet.gender}}</b>
+            </li>
+            
+          </ul>
+          <div class="d-flex justify-content-end m-4">
+            <button (click)="comeBack()" class="h5  rounded-pill">
+              <i class="bi bi-arrow-left-circle-fill text-success"></i>
+              Wróć
+            </button>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card-body">
+            <h5 class="card-title">{{pet.dateFound | date: 'dd.MM.yyyy'}}</h5>
+            <p class="card-text">{{pet.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

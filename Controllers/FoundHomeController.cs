@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
 using FundacjaZawszeRazem.Data;
 using FundacjaZawszeRazem.DTOs;
-using FundacjaZawszeRazem;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace FundacjaZawszeRazem.Controllers
@@ -64,7 +61,7 @@ namespace FundacjaZawszeRazem.Controllers
             }
         }
 
-        // Editadopted pet
+        // Edit adopted pet
         [HttpPut("{id}")]
         public async Task<IActionResult> EditAdoptedPet(int id, [FromBody] FoundHomeToUpdateDTO model)
         {

@@ -17,6 +17,8 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from '@angular/router';
 import { PriceListComponent } from './components/price-list/price-list.component';
 import { FoundHomeDetailsComponent } from './components/foundHome-details/foundHome-details.component';
+import { RecentlyFoundComponent } from './components/recently-found/recently-found.component';
+import { RecentlyFoundDetailsComponent } from './components/recently-found-details/recently-found-details.component';
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomePageComponent},
@@ -34,6 +36,8 @@ const routes: Routes = [
     {path: 'adopted',  component: AdoptedPetsComponent},
     {path: 'adopted/:id', component: FoundHomeDetailsComponent},
     {path: 'pet-details/:id', component: PetDetailsComponent},
+    {path: 'recently-found', component: RecentlyFoundComponent},
+    {path: 'recently-found/:id', component: RecentlyFoundDetailsComponent},
     {path: '**', component: PageNotFoundComponent}
 ];
 
